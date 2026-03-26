@@ -3,7 +3,7 @@ spring:
     name: AURUS-SERVICE
 
 server:
-  port: 8081
+  port: 1111
 
 eureka:
   client:

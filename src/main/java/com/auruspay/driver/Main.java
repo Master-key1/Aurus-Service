@@ -4,6 +4,7 @@ import java.util.logging.Logger;
 
 import org.springframework.stereotype.Service;
 
+import com.auruspay.exceptionhandler.NodeNotFountException;
 import com.auruspay.service.LogFinderService;
 import com.auruspay.util.TimeResult;
 import com.auruspay.util.TimeUtil;
@@ -16,13 +17,8 @@ public class Main {
     public StringBuilder invokeLogDetails(String txnId, String uniqueID, String auruspayDate) {
 
         StringBuilder logMessage = new StringBuilder();
-
-        logMessage.append("Log not found for \n {")
-                .append("\n\"txnId\" : \"").append(txnId).append("\" ,")
-                .append("\n\"uniqueID\" : \"").append(uniqueID).append("\",")
-                .append("\n\"auruspayDate\" : \"").append(auruspayDate).append("\"")
-                .append("\n}");
-        
+        if(txnId == null)
+        	throw new NodeNotFountException("Transaction ID IS NULL...");
 
         boolean withinOneHour = false;
         String formattedHour = null;
@@ -72,7 +68,7 @@ public class Main {
 
                 logger.info("UUID found: " + uniqueID);
 
-                logMessage = service.searchFullTransaction(
+             service.searchFullTransaction(
                         uniqueID,
                         ip,
                         withinOneHour,

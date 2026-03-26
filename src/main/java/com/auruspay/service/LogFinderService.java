@@ -2,10 +2,11 @@ package com.auruspay.service;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
+import java.util.regex.*;
+
+import com.auruspay.exceptionhandler.NodeNotFountException;
+
 import java.util.logging.Logger;
 
 public class LogFinderService {
@@ -13,7 +14,6 @@ public class LogFinderService {
     private static final Logger logger = Logger.getLogger(LogFinderService.class.getName());
 
     private static final String USERNAME = "kevalin";
-
     private static final String LOG_PATH = "/opt/auruspay_switch/log/auruspay/auruspay.log";
 
     private final Map<String, String> nodeMap = new HashMap<>();
@@ -22,8 +22,6 @@ public class LogFinderService {
 
     public LogFinderService() {
 
-        logger.info("Initializing LogFinderService and loading node map");
-
         nodeMap.put("91", "192.168.50.152");
         nodeMap.put("92", "192.168.50.153");
         nodeMap.put("93", "192.168.50.172");
@@ -31,199 +29,280 @@ public class LogFinderService {
         nodeMap.put("95", "192.168.50.155");
         nodeMap.put("96", "192.168.50.196");
         nodeMap.put("97", "192.168.50.69");
-
-        logger.info("Node map loaded with size: " + nodeMap.size());
     }
 
-    // Step-1
+    // ================= NODE RESOLUTION =================
     public String resolveNodeIP(String txnId) {
 
-        logger.info("Resolving node IP for transaction ID: " + txnId);
+        if (txnId == null || txnId.isEmpty())
+            throw new NodeNotFountException("TxnId is missing");
 
         String nodeKey = txnId.substring(1, 3);
 
-        logger.info("Extracted node key: " + nodeKey);
-
         String ip = nodeMap.get(nodeKey);
 
-        if (ip == null) {
-            logger.warning("No node mapping found for key: " + nodeKey);
-        } else {
-            logger.info("Resolved node IP: " + ip);
-        }
+        if (ip == null)
+            throw new NodeNotFountException("No node mapping found");
 
         return ip;
     }
 
-    private String buildCommand(String searchValue, String ip, boolean withinOneHour, String formattedHour) {
-
-        logger.info("Building command for searchValue: " + searchValue + " IP: " + ip);
+    // ================= COMMAND BUILDER =================
+    private String buildCommand(String searchValue, String ip,
+                                boolean withinOneHour, String formattedHour) {
 
         if (!withinOneHour) {
-
-            logger.info("Searching archived logs for hour: " + formattedHour);
-
             String archivedLog = LOG_PATH + "-" + formattedHour + "*";
-
             return String.format(
                     "ssh %s@%s \"zgrep --text -C5 '%s' %s\"",
                     USERNAME, ip, searchValue, archivedLog);
-
         } else {
-
-            logger.info("Searching current log file");
-
             return String.format(
                     "ssh %s@%s \"grep --text -C5 '%s' %s\"",
                     USERNAME, ip, searchValue, LOG_PATH);
         }
     }
 
-    // Step-2
-    public String findUUID(String txnId, String ip, boolean withinOneHour, String formattedHour) throws Exception {
-
-        logger.info("Starting UUID search for transaction ID: " + txnId + " on node: " + ip);
+    // ================= FIND UUID =================
+    public String findUUID(String txnId, String ip,
+                           boolean withinOneHour, String formattedHour) throws Exception {
 
         String cmd = buildCommand(txnId, ip, withinOneHour, formattedHour);
 
-        logger.info("Executing command: " + cmd);
+        Process process = new ProcessBuilder("bash", "-c", cmd)
+                .redirectErrorStream(true)
+                .start();
 
-        ProcessBuilder pb = new ProcessBuilder("bash", "-c", cmd);
-
-        pb.redirectErrorStream(true);
-
-        Process process = pb.start();
-
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+        try (BufferedReader reader =
+                     new BufferedReader(new InputStreamReader(process.getInputStream()))) {
 
             String line;
 
             while ((line = reader.readLine()) != null) {
-
-                logger.fine("Processing log line");
 
                 if (line.contains(txnId)) {
 
                     Matcher matcher = UUID_PATTERN.matcher(line);
 
                     if (matcher.find()) {
-
-                        String uuid = matcher.group();
-
-                        logger.info("UUID found: " + uuid);
-
-                        return uuid;
+                        return matcher.group();
                     }
                 }
             }
         }
 
-        logger.warning("UUID not found for transaction ID: " + txnId);
-
         return null;
     }
 
-    // Step-3
-    public StringBuilder searchFullTransaction(String uuid,
-                                               String ip,
-                                               boolean withinOneHour,
-                                               String formattedHour) throws Exception {
+    // ================= TRANSACTION MODEL =================
+    static class Transaction {
 
-        logger.info("Starting full transaction search for UUID: " + uuid + " from IP: " + ip);
-        int count = 0;
-        StringBuilder data = new StringBuilder();
-        //withinOneHour
-      if(withinOneHour==true) {
-    	   String cmd = buildCommand(uuid, ip, withinOneHour, formattedHour);  
-              logger.info("Generated command: " + cmd);
+        String uuid;
 
-     
+        String aurusEncryptedRequest;
+        String processorRequest;
+        String processorResponse;
+        String aurusEncryptedResponse;
 
-        ProcessBuilder pb = new ProcessBuilder("bash", "-c", cmd);
+        String responseCode;
+        String responseMessage;
+        String authCode;
 
-        pb.redirectErrorStream(true);
+        String finalStatus;
+        String failureReason;
 
-        logger.info("Executing command...");
+        List<String> issues = new ArrayList<>();
+    }
 
-        Process process = pb.start();
+    // ================= MAIN PARSER =================
+    public List<Transaction> searchFullTransaction(String uuid,
+                                                   String ip,
+                                                   boolean withinOneHour,
+                                                   String formattedHour) throws Exception {
+
+        List<Transaction> transactions = new ArrayList<>();
+        Transaction currentTxn = null;
+
+        boolean captureEncReq = false;
+        boolean captureReq = false;
+        boolean captureResp = false;
+        boolean captureEncResp = false;
+
+        StringBuilder encReq = new StringBuilder();
+        StringBuilder req = new StringBuilder();
+        StringBuilder resp = new StringBuilder();
+        StringBuilder encResp = new StringBuilder();
+
+        String cmd = buildCommand(uuid, ip, withinOneHour, formattedHour);
+
+        Process process = new ProcessBuilder("bash", "-c", cmd)
+                .redirectErrorStream(true)
+                .start();
 
         try (BufferedReader reader =
-                new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+                     new BufferedReader(new InputStreamReader(process.getInputStream()))) {
 
             String line;
 
-             count = 0;
-
             while ((line = reader.readLine()) != null) {
 
-                data.append(line).append("\n");
+                Matcher m = UUID_PATTERN.matcher(line);
 
-                count++;
+                if (m.find()) {
+
+                    currentTxn = new Transaction();
+                    currentTxn.uuid = m.group();
+                    transactions.add(currentTxn);
+
+                    // Reset flags
+                    captureEncReq = captureReq = captureResp = captureEncResp = false;
+                }
+
+                if (currentTxn == null) continue;
+
+                boolean isTarget = line.contains(currentTxn.uuid);
+
+                // ===== ENCRYPTED REQUEST =====
+                if (line.contains("[STPL-GRAY-STREAM]-AURUSPAY ENCRYPTED REQUEST") && isTarget) {
+
+                    captureEncReq = true;
+                    encReq.setLength(0);
+                    encReq.append(line).append("\n");
+                    continue;
+                }
+
+                if (captureEncReq) {
+
+                    encReq.append(line).append("\n");
+
+                    if (line.trim().isEmpty()) {
+                        captureEncReq = false;
+                        currentTxn.aurusEncryptedRequest = encReq.toString();
+                    }
+                    continue;
+                }
+
+                // ===== PROCESSOR REQUEST =====
+                if (line.contains("[STPL-GRAY-STREAM]- REQUEST") && isTarget) {
+
+                    captureReq = true;
+                    req.setLength(0);
+                    req.append(line).append("\n");
+                    continue;
+                }
+
+                if (captureReq) {
+
+                    req.append(line).append("\n");
+
+                    if (line.contains("</Request>")) {
+                        captureReq = false;
+                        currentTxn.processorRequest = req.toString();
+                    }
+                    continue;
+                }
+
+                // ===== PROCESSOR RESPONSE =====
+                if (line.contains("[STPL-GRAY-STREAM]-FINAL RESPONSE") && isTarget) {
+
+                    captureResp = true;
+                    resp.setLength(0);
+                    resp.append(line).append("\n");
+                    continue;
+                }
+
+                if (captureResp) {
+
+                    resp.append(line).append("\n");
+
+                    if (line.contains("<RespCode>"))
+                        currentTxn.responseCode = extractXML(line, "RespCode");
+
+                    if (line.contains("<AuthID>"))
+                        currentTxn.authCode = extractXML(line, "AuthID");
+
+                    if (line.contains("<AddtlRespData>"))
+                        currentTxn.responseMessage = extractXML(line, "AddtlRespData");
+
+                    if (line.contains("</GMF>")) {
+                        captureResp = false;
+                        currentTxn.processorResponse = resp.toString();
+                    }
+                    continue;
+                }
+
+                // ===== ENCRYPTED RESPONSE =====
+                if (line.contains("[STPL-GRAY-STREAM]-AURUSPAY ENCRYPTED RESPONSE") && isTarget) {
+
+                    captureEncResp = true;
+                    encResp.setLength(0);
+                    encResp.append(line).append("\n");
+                    continue;
+                }
+
+                if (captureEncResp) {
+
+                    encResp.append(line).append("\n");
+
+                    if (line.trim().isEmpty()) {
+                        captureEncResp = false;
+                        currentTxn.aurusEncryptedResponse = encResp.toString();
+                    }
+                    continue;
+                }
+
+                // ===== ERROR DETECTION =====
+                if (line.matches(".*(ERROR|Exception|Timeout|Declined|Failed).*")) {
+                    currentTxn.issues.add(line);
+                }
             }
-
-            logger.info("Total log lines captured: " + count);
-
-        } catch (Exception e) {
-
-            logger.severe("Error while reading process output: " + e.getMessage());
-
-            throw e;
         }
 
-        int exitCode = process.waitFor();
+        process.waitFor();
 
-        logger.info("Command execution completed with exit code: " + exitCode);
-       }else  {
+        // ================= AI ANALYSIS =================
+        for (Transaction t : transactions) {
 
-    	   String cmd = buildCommand(uuid, ip, withinOneHour, formattedHour);  
-              logger.info("Generated command: " + cmd);
-
-     
-
-        ProcessBuilder pb = new ProcessBuilder("bash", "-c", cmd);
-
-        pb.redirectErrorStream(true);
-
-        logger.info("Executing command...");
-
-        Process process = pb.start();
-
-        try (BufferedReader reader =
-                new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-
-            String line;
-
-             count = 0;
-
-            while ((line = reader.readLine()) != null) {
-
-                data.append(line).append("\n");
-
-                count++;
+            if ("000".equals(t.responseCode)) {
+                t.finalStatus = "APPROVED";
+                t.failureReason = "NONE";
             }
+            else if (t.responseCode != null) {
+                t.finalStatus = "DECLINED";
+                t.failureReason = "ISSUER_DECLINE";
+            }
+            else if (!t.issues.isEmpty()) {
 
-            logger.info("Total log lines captured: " + count);
+                String issue = t.issues.get(0).toLowerCase();
 
-        } catch (Exception e) {
+                if (issue.contains("timeout"))
+                    t.failureReason = "PROCESSOR_TIMEOUT";
+                else if (issue.contains("connection"))
+                    t.failureReason = "NETWORK_ISSUE";
+                else if (issue.contains("exception"))
+                    t.failureReason = "APPLICATION_ERROR";
+                else
+                    t.failureReason = "UNKNOWN_ERROR";
 
-            logger.severe("Error while reading process output: " + e.getMessage());
-
-            throw e;
+                t.finalStatus = "FAILED";
+            }
+            else {
+                t.finalStatus = "UNKNOWN";
+                t.failureReason = "NO_RESPONSE";
+            }
         }
 
-        int exitCode = process.waitFor();
+        logger.info("Total transactions parsed: " + transactions.size());
 
-        logger.info("Command execution completed with exit code: " + exitCode);
-       
-       }
+        return transactions;
+    }
 
-        if (data.length() == 0) {
+    // ================= XML HELPER =================
+    private String extractXML(String line, String tag) {
 
-            logger.warning("No logs found for UUID: " + uuid);
-        }
+        Pattern p = Pattern.compile("<" + tag + ">(.*?)</" + tag + ">");
+        Matcher m = p.matcher(line);
 
-        logger.info("Transaction log search completed for UUID: " + uuid);
-
-        return data;
+        return m.find() ? m.group(1) : null;
     }
 }

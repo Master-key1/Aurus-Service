@@ -26,13 +26,14 @@ public class AurusServiceController {
 	
 	
 	   private static final Logger logger = Logger.getLogger(AurusServiceController.class.getName());
+	   private static final int ResponseEntity = 0;
 
 	    @GetMapping("/log/{txnID}/{uniqueID}/{auruspayDate}")
 	    public ResponseEntity<String> getLogDetails(
 	            @PathVariable String txnID,
 	            @PathVariable String uniqueID,
 	            @PathVariable String auruspayDate) {
-
+	    	
 	        logger.info("Received request for log search");
 	        logger.info("txnID: " + txnID + ", uniqueID: " + uniqueID + ", auruspayDate: " + auruspayDate);
 
@@ -64,6 +65,7 @@ public class AurusServiceController {
 		String uniqueID = details.getUniqueID();
 		String auruspayDate = details.getAuruspayDate();
 		*/
+		
 		String details = "logger : (port : "; 
 		String port = env.getProperty("server.port");
 		details+=port +")";
@@ -73,11 +75,32 @@ public class AurusServiceController {
 	
 
     @GetMapping("/test")
-    public String test() {
-    	
+    public ResponseEntity<String> test() {
+    	 try {
+
+             logger.info("Invoking log search service");
+
+             String txnID = null;
+			 String uniqueID= null;
+			 String auruspayDate= null;
+			 StringBuilder logBuffer = main.invokeLogDetails(txnID, uniqueID, auruspayDate);
+
+             logger.info("Log search completed successfully.\n"+logBuffer);
+
+            // return new ResponseEntity<>(logBuffer.toString(), HttpStatus.OK);
+
+         
     	String port = env.getProperty("server.port");
     	
-        return "Aurus Service Running ......... with ( Port : "+port+" )";
+        String  msg = "\"Aurus Service Running ......... with ( Port : \"+port+\" )\"";
+        
+		return new ResponseEntity<String>(msg,HttpStatus.OK);
+    	 } catch (Exception e) {
+
+             logger.severe("Error while fetching logs: " + e.getMessage());
+
+             return new ResponseEntity<>("Error fetching logs"+e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+         }
     }
 	
 
