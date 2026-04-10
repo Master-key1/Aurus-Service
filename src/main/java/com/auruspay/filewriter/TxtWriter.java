@@ -15,7 +15,7 @@ public class TxtWriter {
     }
 
     // ================= MAP + LOG (APPEND MODE) =================
-public void writeMapWithLogs(Map<String, Object> map, String logs) throws IOException {
+public void writeMapWithLogs(Map<String, Object> map, StringBuffer logs) throws IOException {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
 
@@ -47,7 +47,7 @@ public void writeMapWithLogs(Map<String, Object> map, String logs) throws IOExce
 
             // ===== RAW LOGS (NO SEPARATOR HERE) =====
             writer.write("\n======================================= RAW LOGS =================================================================\n");
-            writer.write(logs);
+          //  writer.write(logs);
             writer.write("\n==================================================================================================================\n");
 
             writer.flush();

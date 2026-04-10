@@ -1,4 +1,5 @@
 package com.auruspay.rest;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auruspay.driver.Main;
 import com.auruspay.model.LogServiceDetails;
+import com.auruspay.service.Helper;
 
 @RestController
 @RequestMapping("/aurus")
@@ -23,6 +26,9 @@ public class AurusServiceController {
 	private Main main ;
 	@Autowired
 	private Environment env  ;
+	
+	@Autowired
+	private Helper helper ;
 	
 	
 	   private static final Logger logger = Logger.getLogger(AurusServiceController.class.getName());
@@ -73,7 +79,10 @@ public class AurusServiceController {
 		
 	}
 	
-
+	@GetMapping("/logs")
+	public StringBuffer getLog(@RequestParam("txnId") String txnID) {
+	    return helper.main(txnID);  // should return Map
+	}
     @GetMapping("/test")
     public ResponseEntity<String> test() {
     	 try {

@@ -38,11 +38,11 @@ public class AdvancedSshJump {
 		String jumpUser = "vchavan";
 		String jumpPass = "Bh@nDup$3_2k26!";
 
-		String targetHost = "192.168.50.155";
+		String targetHost = "192.168.50.69";
 		String targetUser = "vchavan";
 		String targetPass = "Ch!nchP0kl!_2k26!";
 
-		String txnId = "295260853503884501";
+		String txnId ="197260891187600651";// "295260853503884501";
 
 		Session jumpSession = null;
 		Session targetSession = null;
@@ -68,9 +68,13 @@ public class AdvancedSshJump {
 			targetSession.setConfig(config);
 			targetSession.connect();
 			
+			if(targetSession.isConnected()) {
+				System.out.println("Host is connected....!");
+			}
 
 			// ===== STEP 1: TXN SEARCH =====
-			String txnCmd = "zgrep --text '" + txnId + "' /opt/auruspay_switch/log/auruspay/auruspay.log-2026-03-26-09*";//-2026-03-26-09*
+			String txnCmd = "grep --text '" + txnId + "' /opt/auruspay_switch/log/auruspay/auruspay.log";//-2026-03-26-09*";//-2026-03-26-09*
+			System.out.println("Command :"+txnCmd);
 			String txnOutput = executeCommand(targetSession, txnCmd);
 			System.out.println(txnOutput);
 		
@@ -89,7 +93,8 @@ public class AdvancedSshJump {
 			System.out.println("\nUUID: " + uuid);
 
 			// ===== STEP 3: UUID LOG =====
-			String uuidCmd = "zgrep --text '" + uuid + "' /opt/auruspay_switch/log/auruspay/auruspay.log-2026-03-26-09*";
+			String uuidCmd = "grep --text '" + uuid + "' /opt/auruspay_switch/log/auruspay/auruspay.log";//-2026-03-26-09*";
+			System.out.println("Command :"+uuidCmd);
 			String uuidOutput = executeCommand(targetSession, uuidCmd);
 
 			System.out.println("\n===== UUID RAW LOG =====");
@@ -148,6 +153,7 @@ public class AdvancedSshJump {
 	private static String executeCommand(Session session, String command) throws Exception {
 
 		ChannelExec channel = (ChannelExec) session.openChannel("exec");
+		//command ="hostname";
 		channel.setCommand(command);
 
 		InputStream in = channel.getInputStream();
