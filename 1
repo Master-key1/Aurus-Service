@@ -1,0 +1,442 @@
+
+des": [
+
+	    {
+
+		          "parameters": {
+
+				          "path": "txn-analysis",
+
+					          "responseMode": "lastNode",
+
+						          "options": {}
+
+							        },
+
+								      "id": "f9f640b9-7696-428b-8411-58cac8ce67b7",
+
+								            "name": "Webhook Trigger",
+
+									          "type": "n8n-nodes-base.webhook",
+
+										        "typeVersion": 1,
+
+											      "position": [
+
+												              -752,
+
+													              -48
+
+														            ],
+
+															          "webhookId": "844a0f8f-a6c6-4e9f-bf56-7c9dbd855fd9"
+
+																      },
+
+																          {
+
+																		        "parameters": {
+
+																				        "functionCode": "const data = $input.first().json || {};\nconst txnId = data.query?.txnId || data.txnId;\n\nif (!txnId) {\n  throw new Error(\"txnId is required in query params\");\n}\n\nreturn [{ txnId }];"
+
+																					      },
+
+																					            "id": "f654d4fe-865e-4925-9f2f-c7df7ba6d4fa",
+
+																						          "name": "Extract txnId",
+
+																							        "type": "n8n-nodes-base.function",
+
+																								      "typeVersion": 1,
+
+																								            "position": [
+
+																										            -512,
+
+																											            -48
+
+																												          ]
+
+																													      },
+
+																													          {
+
+																															        "parameters": {
+
+																																	        "url": "http://localhost:1111/aurus/logs",
+
+																																		        "options": {},
+
+																																			        "queryParametersUi": {
+
+																																					          "parameter": [
+
+																																							              {
+
+																																									                    "name": "txnId",
+
+																																											                  "value": "={{$json.txnId}}"
+
+																																													              }
+
+																																														                ]
+
+																																																        }
+
+																																																	      },
+
+																																																	            "id": "e7886336-fe7c-4a31-9537-96010691b31f",
+
+																																																		          "name": "Fetch Logs API",
+
+																																																			        "type": "n8n-nodes-base.httpRequest",
+
+																																																				      "typeVersion": 1,
+
+																																																				            "position": [
+
+																																																						            -304,
+
+																																																							            -48
+
+																																																								          ]
+
+																																																									      },
+
+																																																									          {
+
+																																																											        "parameters": {
+
+																																																													        "functionCode": "// 1. Helper to recursively clean and format text in any object/string\nconst deepFormat = (data) => {\n  if (typeof data === 'string') {\n    return data\n      .replace(/\\\\n/g, '\\n')       // Convert literal \\n to real newlines\n      .replace(/\\n{3,}/g, '\\n\\n')  // Standardize spacing (max 2 newlines)\n      .trim();\n  }\n  \n  if (data !== null && typeof data === 'object') {\n    const cleaned = Array.isArray(data) ? [] : {};\n    for (const key in data) {\n      cleaned[key] = deepFormat(data[key]);\n    }\n    return cleaned;\n  }\n  \n  return data;\n};\n\n// 2. Safely extract AI Analysis\nlet aiAnalysisRaw = $json.output || \"\";\nlet aiParsed = {};\n\ntry {\n  // If it's already an object, use it; if string, parse it.\n  aiParsed = (typeof aiAnalysisRaw === \"string\") ? JSON.parse(aiAnalysisRaw) : aiAnalysisRaw;\n} catch (e) {\n  aiParsed = { raw: aiAnalysisRaw };\n}\n\n// 3. Construct the perfectly formatted final object\nreturn [{\n  // Transaction Metadata\n  txnId: $json.txnId,\n  respCode: $json.respCode,\n  \n  // Formatted System Messages\n  processorMessage: deepFormat($json.addtlRespData || \"N/A\"),\n  \n  // Rule Engine Details (Safe Navigation)\n  ruleDetails: {\n    message: $json.ruleResult?.message || \"No rules triggered\",\n    reason: deepFormat($json.ruleResult?.reason || \"\"),\n    fixSuggestion: deepFormat($json.ruleResult?.fix || \"No action required\")\n  },\n  \n  // AI Deep Analysis (Cleaned up)\n  aiAnalysis: deepFormat(aiParsed),\n  \n  // This is the main field your HTML dashboard uses\n  prettyOutput: deepFormat(typeof aiAnalysisRaw === \"string\" ? aiAnalysisRaw : JSON.stringify(aiAnalysisRaw, null, 2))\n}];\n\n\n"
+
+																																																														      },
+
+																																																														            "id": "e50b1972-ba73-40d0-9c01-26286a223a11",
+
+																																																															          "name": "Format Response",
+
+																																																																        "type": "n8n-nodes-base.function",
+
+																																																																	      "typeVersion": 1,
+
+																																																																	            "position": [
+
+																																																																			            496,
+
+																																																																				            -48
+
+																																																																					          ]
+
+																																																																						      },
+
+																																																																						          {
+
+																																																																								        "parameters": {
+
+																																																																										        "functionCode": "const map = {\n  \"532\": {\n    message: \"PIN BLOCK ERROR\",\n    reason: \"Invalid PIN block\",\n    fix: \"Check PIN encryption\"\n  },\n  \"05\": {\n    message: \"DO NOT HONOR\",\n    reason: \"Issuer decline\",\n    fix: \"Retry later\"\n  }\n};\n\n// Ì±â Full AI Prompt (separate variable)\nconst prompt = `You are a payment domain expert specializing in POS, EMV, ISO8583, and payment gateway (Aurus/Fiserv).\n\nAnalyze the below transaction logs in detail and provide a complete root cause analysis.\n\n### Ì¥π INPUT DATA:\n1. Aurus Request (Decrypted)\n2. Processor Request (XML/ISO)\n3. Processor Response\n4. Aurus Response\n5. Raw Logs (if available)\n\n---\n\n### Ì¥ç ANALYSIS REQUIRED:\n\n#### 1Ô∏è‚É£ Transaction Summary\n- TxnId\n- Amount\n- Card Type\n- Entry Mode\n- Transaction Type\n- Timestamp\n\n#### 2Ô∏è‚É£ Request Validation (Aurus ‚Üí Processor)\n- Validate mapping (amount, track2, entry mode, currency, terminal, EMV)\n\n#### 3Ô∏è‚É£ EMV Validation\n- Validate tags: 9F26, 9F27, 9F10, 95, 82\n\n#### 4Ô∏è‚É£ PIN Validation\n- Validate PIN block format, encryption, key issues\n\n#### 5Ô∏è‚É£ Processor Response\n- Code, message, network\n\n#### 6Ô∏è‚É£ Aurus Mapping\n- Validate mapping\n\n#### 7Ô∏è‚É£ ROOT CAUSE\n- Exact issue + system responsible\n\n#### 8Ô∏è‚É£ FINAL CONCLUSION\n- Why failed\n\n#### 9Ô∏è‚É£ FIX\n- Exact fix steps\n\n‚ö†Ô∏è Be precise. No generic answers.\n\n### LOG DATA:\n{{LOG_DATA}}`;   // you can replace dynamically\n\n// Ì±â Get response code\nconst code = $json.respCode;\nlet aurusConstants;\n// Ì±â Final Output\nreturn [{\n  ...$json,\n  ruleResult: map[code] || {\n    message: \"AI Analysis\",\n    reason: \"Ai Analysis Required\",\n    fix: \"Send to AI\",\n    prompt: prompt\n//   aurusConstants:  Aurus_Constants;\n  }\n}];\n\n"
+
+																																																																											      },
+
+																																																																											            "id": "26317da5-8854-421a-8a01-d9e7522b4c6e",
+
+																																																																												          "name": "Rule Engine",
+
+																																																																													        "type": "n8n-nodes-base.function",
+
+																																																																														      "position": [
+
+																																																																															              -48,
+
+																																																																																              -48
+
+																																																																																	            ],
+
+																																																																																		          "typeVersion": 1
+
+																																																																																			      },
+
+																																																																																			          {
+
+																																																																																					        "parameters": {
+
+																																																																																							        "promptType": "define",
+
+																																																																																								        "text": "={{ $json.AurusReqDecrypt }}{{ $json.ProcReqDecrypt }}{{ $json.ProcResDecrypt }}{{ $json.AurusResDecrypt }}{{ $json.LogDetails }}{{ $json.ruleResult }}",
+
+																																																																																									        "options": {
+
+																																																																																											          "systemMessage": "={{ $json.ruleResult }}\n"
+
+																																																																																												          }
+
+																																																																																													        },
+
+																																																																																														      "type": "@n8n/n8n-nodes-langchain.agent",
+
+																																																																																														            "typeVersion": 3.1,
+
+																																																																																															          "position": [
+
+																																																																																																	          144,
+
+																																																																																																		          -48
+
+																																																																																																			        ],
+
+																																																																																																				      "id": "574006ca-8df2-407b-94b8-8ed8a19d9a21",
+
+																																																																																																				            "name": "AI Agent"
+
+																																																																																																					        },
+
+																																																																																																						    {
+
+																																																																																																							          "parameters": {
+
+																																																																																																									          "model": {
+
+																																																																																																											            "__rl": true,
+
+																																																																																																												              "value": "gpt-oss:20b",
+
+																																																																																																													                "mode": "list",
+
+																																																																																																															          "cachedResultName": "gpt-oss:20b"
+
+																																																																																																																          },
+
+																																																																																																																	          "builtInTools": {},
+
+																																																																																																																		          "options": {}
+
+																																																																																																																			        },
+
+																																																																																																																				      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+
+																																																																																																																				            "typeVersion": 1.3,
+
+																																																																																																																					          "position": [
+
+																																																																																																																							          112,
+
+																																																																																																																								          128
+
+																																																																																																																									        ],
+
+																																																																																																																										      "id": "b69bcca1-d7ca-4a06-88b4-f3b68d42fccd",
+
+																																																																																																																										            "name": "OpenAI Chat Model",
+
+																																																																																																																											          "credentials": {
+
+																																																																																																																													          "openAiApi": {
+
+																																																																																																																															            "id": "6HjgltE1NHfmVvAB",
+
+																																																																																																																																              "name": "OpenAI account"
+
+																																																																																																																																	              }
+
+																																																																																																																																		            }
+
+																																																																																																																																			        },
+
+																																																																																																																																				    {
+
+																																																																																																																																					          "parameters": {
+
+																																																																																																																																							          "sessionIdType": "customKey",
+
+																																																																																																																																								          "sessionKey": "dummy-key"
+
+																																																																																																																																									        },
+
+																																																																																																																																										      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+
+																																																																																																																																										            "typeVersion": 1.3,
+
+																																																																																																																																											          "position": [
+
+																																																																																																																																													          256,
+
+																																																																																																																																														          144
+
+																																																																																																																																															        ],
+
+																																																																																																																																																      "id": "45ff0924-5b8d-4693-8dfb-8dc65c6a1ec3",
+
+																																																																																																																																																            "name": "Simple Memory1"
+
+																																																																																																																																																	        }
+
+																																																																																																																																																		  ],
+
+																																																																																																																																																		    "connections": {
+
+																																																																																																																																																			        "Webhook Trigger": {
+
+																																																																																																																																																					      "main": [
+
+																																																																																																																																																						              [
+
+																																																																																																																																																								                {
+
+																																																																																																																																																											            "node": "Extract txnId",
+
+																																																																																																																																																												                "type": "main",
+
+																																																																																																																																																														            "index": 0
+
+																																																																																																																																																															              }
+
+																																																																																																																																																																              ]
+
+																																																																																																																																																																	            ]
+
+																																																																																																																																																																		        },
+
+																																																																																																																																																																			    "Extract txnId": {
+
+																																																																																																																																																																				          "main": [
+
+																																																																																																																																																																						          [
+
+																																																																																																																																																																								            {
+
+																																																																																																																																																																										                "node": "Fetch Logs API",
+
+																																																																																																																																																																												            "type": "main",
+
+																																																																																																																																																																													                "index": 0
+
+																																																																																																																																																																															          }
+
+																																																																																																																																																																																          ]
+
+																																																																																																																																																																																	        ]
+
+																																																																																																																																																																																		    },
+
+																																																																																																																																																																																		        "Fetch Logs API": {
+
+																																																																																																																																																																																				      "main": [
+
+																																																																																																																																																																																					              [
+
+																																																																																																																																																																																							                {
+
+																																																																																																																																																																																										            "node": "Rule Engine",
+
+																																																																																																																																																																																											                "type": "main",
+
+																																																																																																																																																																																													            "index": 0
+
+																																																																																																																																																																																														              }
+
+																																																																																																																																																																																															              ]
+
+																																																																																																																																																																																																            ]
+
+																																																																																																																																																																																																	        },
+
+																																																																																																																																																																																																		    "Rule Engine": {
+
+																																																																																																																																																																																																			          "main": [
+
+																																																																																																																																																																																																					          [
+
+																																																																																																																																																																																																							            {
+
+																																																																																																																																																																																																									                "node": "AI Agent",
+
+																																																																																																																																																																																																											            "type": "main",
+
+																																																																																																																																																																																																												                "index": 0
+
+																																																																																																																																																																																																														          }
+
+																																																																																																																																																																																																															          ]
+
+																																																																																																																																																																																																																        ]
+
+																																																																																																																																																																																																																	    },
+
+																																																																																																																																																																																																																	        "AI Agent": {
+
+																																																																																																																																																																																																																			      "main": [
+
+																																																																																																																																																																																																																				              [
+
+																																																																																																																																																																																																																						                {
+
+																																																																																																																																																																																																																									            "node": "Format Response",
+
+																																																																																																																																																																																																																										                "type": "main",
+
+																																																																																																																																																																																																																												            "index": 0
+
+																																																																																																																																																																																																																													              }
+
+																																																																																																																																																																																																																														              ]
+
+																																																																																																																																																																																																																															            ]
+
+																																																																																																																																																																																																																																        },
+
+																																																																																																																																																																																																																																	    "OpenAI Chat Model": {
+
+																																																																																																																																																																																																																																		          "ai_languageModel": [
+
+																																																																																																																																																																																																																																				          [
+
+																																																																																																																																																																																																																																						            {
+
+																																																																																																																																																																																																																																								                "node": "AI Agent",
+
+																																																																																																																																																																																																																																										            "type": "ai_languageModel",
+
+																																																																																																																																																																																																																																											                "index": 0
+
+																																																																																																																																																																																																																																													          }
+
+																																																																																																																																																																																																																																														          ]
+
+																																																																																																																																																																																																																																															        ]
+
+																																																																																																																																																																																																																																																    },
+
+																																																																																																																																																																																																																																																        "Simple Memory1": {
+
+																																																																																																																																																																																																																																																		      "ai_memory": [
+
+																																																																																																																																																																																																																																																			              [
+
+																																																																																																																																																																																																																																																					                {
+
+																																																																																																																																																																																																																																																								            "node": "AI Agent",
+
+																																																																																																																																																																																																																																																									                "type": "ai_memory",
+
+																																																																																																																																																																																																																																																											            "index": 0
+
+																																																																																																																																																																																																																																																												              }
+
+																																																																																																																																																																																																																																																													              ]
+
+																																																																																																																																																																																																																																																														            ]
+
+																																																																																																																																																																																																																																																															        }
+
+																																																																																																																																																																																																																																																																  },
+
+																																																																																																																																																																																																																																																																    "pinData": {},
+
+																																																																																																																																																																																																																																																																      "meta": {
+
+																																																																																																																																																																																																																																																																	          "templateCredsSetupCompleted": true,
+
+																																																																																																																																																																																																																																																																		      "instanceId": "7532049491b71133302c15453b084cfe15f0a918310dfb6188b86575d5463f61"
+
+																																																																																																																																																																																																																																																																		        }
+
+																																																																																																																																																																																																																																																																			}
