@@ -1,6 +1,6 @@
 package com.auruspay.model;
 
-public class LogServiceDetails {
+public class LogService {
 	
 	private String txnID;
 	private String uniqueID;

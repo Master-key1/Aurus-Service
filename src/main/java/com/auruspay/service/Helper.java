@@ -7,7 +7,9 @@ import com.auruspay.filewriter.TxtWriter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jcraft.jsch.*;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -35,15 +37,25 @@ public class Helper {
 
 
     public static StringBuffer main(String txnId ) {
+    	
+    	System.out.println("Program Started........!");
         // Use Environment Variables or Input for Security - DO NOT HARDCODE IN PROD
         String jumpHost = "uat42.auruspay.com";
         String jumpUser = "vchavan";
-        String jumpPass = "Bh@nDup$3_2k26!"; 
+        String jumpPass ="Sh!rd!$3_2k26!";// "Bh@nDup$3_2k26!"; 
 
         String targetHost = null;
         System.out.println("Node: "+txnId.substring(1,3));
         if(txnId.substring(1,3).equals("95")) {
         	targetHost= "192.168.50.155";
+        }else  if(txnId.substring(1,3).equals("91")) {
+        	targetHost= "192.168.50.152";
+        }else  if(txnId.substring(1,3).equals("92")) {
+        	targetHost= "192.168.50.153";
+        }else  if(txnId.substring(1,3).equals("93")) {
+        	targetHost= "192.168.50.72";
+        }else  if(txnId.substring(1,3).equals("94")) {
+        	targetHost= "192.168.50.172";
         }else  if(txnId.substring(1,3).equals("97")) {
         	targetHost= "192.168.50.69";
         }else {
@@ -54,7 +66,7 @@ public class Helper {
         
         
         String targetUser = "vchavan";
-        String targetPass = "Ch!nchP0kl!_2k26!";
+        String targetPass = "T!rup@t!_2k26!"; //"Ch!nchP0kl!_2k26!";
         StringBuffer uuidOutput =null;
 
         // "295260853503884501";
@@ -83,10 +95,11 @@ public class Helper {
             // --- STEP 1 & 2: DYNAMIC TXN SEARCH ---
             // Uses current date to avoid manual updates every day
             String logPathPattern = "/opt/auruspay_switch/log/auruspay/auruspay.log" + DATE_PATTERN ;
-            String txnCmd = "zgrep --text '" + txnId + "' " + logPathPattern;
+            String txnCmd = "zgrep --text -C10 '" + txnId + "' " + logPathPattern;
             System.out.println(txnCmd);
             
             StringBuffer txnOutput = executeCommand(targetSession, txnCmd);
+            executeCommand1(targetSession, txnCmd);
             if (txnOutput.isEmpty()) {
                 System.err.println("Transaction ID not found in logs for " + DATE_PATTERN);
                 return new StringBuffer().append("Transaction ID not found in logs for ").append( DATE_PATTERN );
@@ -183,6 +196,36 @@ public class Helper {
         return output;
     }
 
+    private static String executeCommand1(Session session, String command) throws Exception {
+
+        ChannelExec channel = (ChannelExec) session.openChannel("exec");
+        channel.setCommand(command);
+
+        System.out.println("🚀 Executing Command: " + command);
+
+        StringBuilder output = new StringBuilder();
+
+        try (InputStream in = channel.getInputStream();
+             BufferedReader reader = new BufferedReader(new InputStreamReader(in), 8192)) {
+
+            channel.connect();
+
+            String line;
+
+            // ✅ Read line by line (REAL-TIME PRINT)
+            while ((line = reader.readLine()) != null) {
+                System.out.println("➡️ " + line);   // 🔥 PRINT EACH LINE
+                output.append(line).append("\n");  // store full output
+            }
+
+        } finally {
+            channel.disconnect();
+        }
+
+        System.out.println("✅ Command Execution Completed");
+
+        return output.toString();
+    }
     private static Map<String, Object> parseLog(StringBuffer logs, String uuid, String txnId) {
 
         Map<String, Object> map = new LinkedHashMap<>(); // preserves order
@@ -200,7 +243,10 @@ public class Helper {
             // Helper to extract and decrypt
             processLine(line, "AURUSPAY ENCRYPTED REQUEST :", "AurusReq", map);
             processLine(line, "[STPL-GRAY-STREAM]- REQUEST :", "ProcReq", map);
+            if(line.contains("[STPL-GRAY-STREAM]-FINAL RESPONSE :"))
             processLine(line, "[STPL-GRAY-STREAM]-FINAL RESPONSE :", "ProcRes", map);
+            else if(line.contains( "[STPL-GRAY-STREAM]-TRANSACTION RESPONSE :"))
+            processLine(line, "[STPL-GRAY-STREAM]-TRANSACTION RESPONSE :", "ProcRes", map);
             processLine(line, "AURUSPAY ENCRYPTED RESPONSE :", "AurusRes", map);
 
             if (line.matches(".*(ERROR|Exception|Timeout|Declined|Failed).*")) {
@@ -217,9 +263,13 @@ public class Helper {
             // Critical Fix: Remove whitespace before decryption
             String sanitized = encrypted.replaceAll("\\s", "");
           //  map.put(mapKey + "Encrypt", sanitized);
+            
+            
             try {
                 String decrypted = AurusDecryptor.decryptor(sanitized);
+                System.out.println(decrypted);
                 map.put(mapKey + "Decrypt", decrypted);
+                
             } catch (Exception e) {
                 map.put(mapKey + "Decrypt", "DECRYPTION_ERROR: " + e.getMessage());
             }

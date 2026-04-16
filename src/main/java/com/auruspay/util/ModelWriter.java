@@ -5,7 +5,7 @@ import java.io.File;
 import com.auruspay.filewriter.ExcelWriter;
 
 public class ModelWriter {
-    public static void main(String[] args) {
+    public static void main(String args) {
 
     	try {
     	    String fileName = "tasks.xlsx";

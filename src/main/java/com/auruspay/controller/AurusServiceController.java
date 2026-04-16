@@ -1,4 +1,4 @@
-package com.auruspay.rest;
+package com.auruspay.controller;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -13,26 +13,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.auruspay.driver.Main;
-import com.auruspay.model.LogServiceDetails;
+import com.auruspay.AurusServiceApplication;
+import com.auruspay.model.LogService;
+import com.auruspay.service.Driver;
 import com.auruspay.service.Helper;
 
 @RestController
 @RequestMapping("/aurus")
 public class AurusServiceController {
+
+    private final AurusServiceApplication aurusServiceApplication;
 	
-	@Autowired
-	private Main main ;
+
 	@Autowired
 	private Environment env  ;
 	
 	@Autowired
 	private Helper helper ;
+	@Autowired
+	private Driver driver;
 	
 	
 	   private static final Logger logger = Logger.getLogger(AurusServiceController.class.getName());
 	   private static final int ResponseEntity = 0;
+
+    AurusServiceController(AurusServiceApplication aurusServiceApplication) {
+        this.aurusServiceApplication = aurusServiceApplication;
+    }
 
 	    @GetMapping("/log/{txnID}/{uniqueID}/{auruspayDate}")
 	    public ResponseEntity<String> getLogDetails(
@@ -47,11 +54,11 @@ public class AurusServiceController {
 
 	            logger.info("Invoking log search service");
 
-	            StringBuilder logBuffer = main.invokeLogDetails(txnID, uniqueID, auruspayDate);
+	       //     StringBuilder logBuffer = main.invokeLogDetails(txnID, uniqueID, auruspayDate);
 
-	            logger.info("Log search completed successfully.\n"+logBuffer);
+	       //     logger.info("Log search completed successfully.\n"+logBuffer);
 
-	            return new ResponseEntity<>(logBuffer.toString(), HttpStatus.OK);
+	      //      return new ResponseEntity<>(logBuffer.toString(), HttpStatus.OK);
 
 	        } catch (Exception e) {
 
@@ -59,6 +66,7 @@ public class AurusServiceController {
 
 	            return new ResponseEntity<>("Error fetching logs", HttpStatus.INTERNAL_SERVER_ERROR);
 	        }
+	        return null;
 	    }
 	
 	@GetMapping("/logger")
@@ -80,9 +88,25 @@ public class AurusServiceController {
 	}
 	
 	@GetMapping("/logs")
-	public StringBuffer getLog(@RequestParam("txnId") String txnID) {
-	    return helper.main(txnID);  // should return Map
+	public StringBuffer getLog(@RequestParam("txnid") String txnID) {
+	//    return helper.main(txnID);  // should return Map
+	    return driver.main(txnID);   
+		
 	}
+	
+	  @PostMapping("/txnlog")
+	    public String gettxnLog( @RequestBody LogService logService ){
+	          
+		  System.out.println("TXN ID :"+logService.getTxnID());
+		  System.out.println("Date :"+logService.getAuruspayDate());
+		  System.out.println("UUID "+logService.getUniqueID());
+		  
+		  return helper.main(logService.getTxnID()).toString();
+		  
+	  }
+	
+	
+	
     @GetMapping("/test")
     public ResponseEntity<String> test() {
     	 try {
@@ -92,9 +116,9 @@ public class AurusServiceController {
              String txnID = null;
 			 String uniqueID= null;
 			 String auruspayDate= null;
-			 StringBuilder logBuffer = main.invokeLogDetails(txnID, uniqueID, auruspayDate);
+			// StringBuilder logBuffer = main.invokeLogDetails(txnID, uniqueID, auruspayDate);
 
-             logger.info("Log search completed successfully.\n"+logBuffer);
+          //   logger.info("Log search completed successfully.\n"+logBuffer);
 
             // return new ResponseEntity<>(logBuffer.toString(), HttpStatus.OK);
 
