@@ -42,8 +42,10 @@ public class Helper {
         // Use Environment Variables or Input for Security - DO NOT HARDCODE IN PROD
         String jumpHost = "uat42.auruspay.com";
         String jumpUser = "vchavan";
-        String jumpPass ="Sh!rd!$3_2k26!";// "Bh@nDup$3_2k26!"; 
-
+        String jumpPass ="D!g@mb@r$3_2k26!";// "Bh@nDup$3_2k26!"; 
+        String targetUser = "vchavan";
+        String targetPass = "K0yN@$3$_2k26!"; //"Ch!nchP0kl!_2k26!";
+        StringBuffer uuidOutput =null;
         String targetHost = null;
         System.out.println("Node: "+txnId.substring(1,3));
         if(txnId.substring(1,3).equals("95")) {
@@ -52,9 +54,9 @@ public class Helper {
         	targetHost= "192.168.50.152";
         }else  if(txnId.substring(1,3).equals("92")) {
         	targetHost= "192.168.50.153";
-        }else  if(txnId.substring(1,3).equals("93")) {
-        	targetHost= "192.168.50.72";
         }else  if(txnId.substring(1,3).equals("94")) {
+        	targetHost= "192.168.50.72";
+        }else  if(txnId.substring(1,3).equals("93")) {
         	targetHost= "192.168.50.172";
         }else  if(txnId.substring(1,3).equals("97")) {
         	targetHost= "192.168.50.69";
@@ -65,9 +67,7 @@ public class Helper {
         
         
         
-        String targetUser = "vchavan";
-        String targetPass = "T!rup@t!_2k26!"; //"Ch!nchP0kl!_2k26!";
-        StringBuffer uuidOutput =null;
+      
 
         // "295260853503884501";
 
@@ -95,7 +95,7 @@ public class Helper {
             // --- STEP 1 & 2: DYNAMIC TXN SEARCH ---
             // Uses current date to avoid manual updates every day
             String logPathPattern = "/opt/auruspay_switch/log/auruspay/auruspay.log" + DATE_PATTERN ;
-            String txnCmd = "zgrep --text -C10 '" + txnId + "' " + logPathPattern;
+            String txnCmd = "zgrep --text  '" + txnId + "' " + logPathPattern;
             System.out.println(txnCmd);
             
             StringBuffer txnOutput = executeCommand(targetSession, txnCmd);
@@ -116,7 +116,7 @@ public class Helper {
             System.out.println("Target UUID: " + uuid);
 
             // --- STEP 3: FETCH FULL UUID LOG ---
-            String uuidCmd = "zgrep --text '" + uuid + "' " + logPathPattern;
+            String uuidCmd = "zgrep --text -C20 '" + uuid + "' " + logPathPattern;
              uuidOutput = executeCommand(targetSession, uuidCmd);
              System.out.println("Log Details: " + uuidOutput);
 
@@ -242,11 +242,8 @@ public class Helper {
 
             // Helper to extract and decrypt
             processLine(line, "AURUSPAY ENCRYPTED REQUEST :", "AurusReq", map);
-            processLine(line, "[STPL-GRAY-STREAM]- REQUEST :", "ProcReq", map);
-            if(line.contains("[STPL-GRAY-STREAM]-FINAL RESPONSE :"))
-            processLine(line, "[STPL-GRAY-STREAM]-FINAL RESPONSE :", "ProcRes", map);
-            else if(line.contains( "[STPL-GRAY-STREAM]-TRANSACTION RESPONSE :"))
-            processLine(line, "[STPL-GRAY-STREAM]-TRANSACTION RESPONSE :", "ProcRes", map);
+            processLine(line, "[STPL-GRAY-STREAM]-PROCESSOR REQUEST :", "ProcReq", map);
+            processLine(line, "[STPL-GRAY-STREAM]-PROCESSOR RESPONSE :", "ProcRes", map);
             processLine(line, "AURUSPAY ENCRYPTED RESPONSE :", "AurusRes", map);
 
             if (line.matches(".*(ERROR|Exception|Timeout|Declined|Failed).*")) {
@@ -268,7 +265,7 @@ public class Helper {
             try {
                 String decrypted = AurusDecryptor.decryptor(sanitized);
                 System.out.println(decrypted);
-                map.put(mapKey + "Decrypt", decrypted);
+                map.put(mapKey + "Decrypt", decrypted .replace("\\\"", "\"").replaceAll("^\"|\"$", "").toString());
                 
             } catch (Exception e) {
                 map.put(mapKey + "Decrypt", "DECRYPTION_ERROR: " + e.getMessage());

@@ -1,36 +1,272 @@
-2026-04-16T12:29:13.720+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 18528 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
-2026-04-16T12:29:13.723+05:30 DEBUG 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
-2026-04-16T12:29:13.725+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-04-16T12:29:13.754+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-04-16T12:29:13.754+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-04-16T12:29:14.335+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
-2026-04-16T12:29:14.344+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-16T12:29:14.345+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-04-16T12:29:14.384+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-16T12:29:14.385+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 630 ms
-2026-04-16T12:29:14.629+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-04-16T12:29:14.657+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
-2026-04-16T12:29:14.663+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 1.184 seconds (process running for 1.573)
-2026-04-16T15:12:40.782+05:30  INFO 18528 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-16T15:12:40.783+05:30  INFO 18528 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-16T15:12:40.787+05:30  INFO 18528 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-04-16T16:50:30.165+05:30  INFO 18528 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-04-16T16:50:30.295+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 18528 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
-2026-04-16T16:50:30.296+05:30 DEBUG 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
-2026-04-16T16:50:30.296+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-04-16T16:50:30.475+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
-2026-04-16T16:50:30.476+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-16T16:50:30.476+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-04-16T16:50:30.489+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-16T16:50:30.490+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
-2026-04-16T16:50:30.498+05:30  WARN 18528 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\rest\AurusServiceController.class]: Failed to instantiate [com.auruspay.rest.AurusServiceController]: Constructor threw exception
-2026-04-16T16:50:30.499+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-04-16T16:50:30.505+05:30  INFO 18528 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-04-23T11:59:56.871+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 19760 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T11:59:56.875+05:30 DEBUG 19760 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T11:59:56.876+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T11:59:56.907+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T11:59:56.908+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T11:59:57.709+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T11:59:57.723+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T11:59:57.724+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T11:59:57.764+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T11:59:57.766+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 858 ms
+2026-04-23T11:59:57.997+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T11:59:58.022+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T11:59:58.028+05:30  INFO 19760 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 1.415 seconds (process running for 1.866)
+2026-04-23T12:00:57.866+05:30  INFO 19760 --- [AURUS-SERVICE] [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-04-23T12:01:14.310+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:01:14.313+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:01:14.313+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:01:14.340+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T12:01:14.340+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T12:01:14.860+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:01:14.867+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:01:14.868+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:01:14.896+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:01:14.897+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2026-04-23T12:01:15.103+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:01:15.123+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:01:15.130+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 1.044 seconds (process running for 1.408)
+2026-04-23T12:01:36.702+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:01:36.702+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:01:36.703+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-23T12:14:58.210+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:14:58.275+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:14:58.276+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:14:58.276+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:14:58.406+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:14:58.407+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:14:58.408+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:14:58.419+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:14:58.420+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 142 ms
+2026-04-23T12:14:58.488+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:14:58.495+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:14:58.498+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.242 seconds (process running for 824.713)
+2026-04-23T12:14:58.501+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:15:09.095+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:15:09.176+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:15:09.177+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:15:09.177+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:15:09.292+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:15:09.295+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:15:09.296+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:15:09.307+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:15:09.307+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 128 ms
+2026-04-23T12:15:09.356+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:15:09.363+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:15:09.367+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.207 seconds (process running for 835.582)
+2026-04-23T12:15:09.368+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:15:41.788+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:15:41.789+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:15:41.790+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-23T12:19:57.775+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:19:57.842+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:19:57.842+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:19:57.842+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:19:57.938+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:19:57.939+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:19:57.939+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:19:57.947+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:19:57.948+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 105 ms
+2026-04-23T12:19:57.991+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:19:57.996+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:19:58.001+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.171 seconds (process running for 1124.215)
+2026-04-23T12:19:58.002+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:20:06.348+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:20:06.348+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:20:06.349+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-23T12:20:19.527+05:30 ERROR 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token ";", delete this token
+] with root cause
+
+java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token ";", delete this token
+
+	at com.auruspay.service.Helper.processLine(Helper.java:268) ~[classes/:na]
+	at com.auruspay.service.Helper.parseLog(Helper.java:244) ~[classes/:na]
+	at com.auruspay.service.Helper.main(Helper.java:124) ~[classes/:na]
+	at com.auruspay.controller.AurusServiceController.getLog(AurusServiceController.java:93) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-04-23T12:20:33.109+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:20:33.172+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:20:33.173+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:20:33.173+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:20:33.255+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:20:33.256+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:20:33.256+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:20:33.264+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:20:33.264+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 89 ms
+2026-04-23T12:20:33.300+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:20:33.305+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:20:33.309+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.148 seconds (process running for 1159.523)
+2026-04-23T12:20:33.309+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:20:38.142+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:20:38.142+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:20:38.142+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T12:21:36.847+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:21:36.906+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:21:36.908+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:21:36.908+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:21:36.984+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:21:36.984+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:21:36.984+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:21:36.990+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:21:36.991+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 82 ms
+2026-04-23T12:21:37.027+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:21:37.033+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:21:37.035+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.14 seconds (process running for 1223.25)
+2026-04-23T12:21:37.036+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:21:41.475+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:21:41.475+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:21:41.476+05:30  INFO 20156 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-23T12:41:31.287+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 1 deletion, 3 modifications)
+2026-04-23T12:41:31.377+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:41:31.377+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:41:31.377+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:41:31.492+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:41:31.493+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:41:31.493+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:41:31.504+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:41:31.504+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 126 ms
+2026-04-23T12:41:31.549+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:41:31.553+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:41:31.555+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.193 seconds (process running for 2417.453)
+2026-04-23T12:41:31.556+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:41:39.099+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-23T12:41:39.161+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:41:39.161+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:41:39.161+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:41:39.241+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:41:39.242+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:41:39.242+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:41:39.253+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:41:39.253+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 91 ms
+2026-04-23T12:41:39.260+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helper2' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\service\Helper2.class]: Failed to instantiate [com.auruspay.service.Helper2]: Constructor threw exception
+2026-04-23T12:41:39.260+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:41:39.264+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-16T16:50:30.521+05:30 ERROR 18528 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2026-04-23T12:41:39.273+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\rest\AurusServiceController.class]: Failed to instantiate [com.auruspay.rest.AurusServiceController]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helper2' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\service\Helper2.class]: Failed to instantiate [com.auruspay.service.Helper2]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1317) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1202) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.service.Helper2]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1311) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The blank final field aurusServiceApplication may not have been initialized
+	Return type for the method is missing
+
+	at com.auruspay.service.Helper2.<init>(Helper2.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+
+2026-04-23T12:41:43.785+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:41:43.785+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:41:43.785+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:41:43.914+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:41:43.915+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:41:43.915+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:41:43.931+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:41:43.933+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 147 ms
+2026-04-23T12:41:43.981+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:41:43.986+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:41:43.988+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.213 seconds (process running for 2429.869)
+2026-04-23T12:41:43.989+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:43:23.525+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:43:23.571+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:43:23.571+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:43:23.571+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:43:23.647+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:43:23.647+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:43:23.647+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:43:23.654+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:43:23.654+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 82 ms
+2026-04-23T12:43:23.658+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:43:23.658+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:43:23.660+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:43:23.663+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
@@ -56,15 +292,18 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.rest.AurusServiceController]: Constructor threw exception
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
 	... 24 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problem: 
-	The declared package "com.auruspay.controller" does not match the expected package "com.auruspay.rest"
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Duplicate field AurusServiceController.helper
+	Duplicate field AurusServiceController.helper
+	Return type for the method is missing
+	Type mismatch: cannot convert from StringBuffer to Map<String,Object>
 
-	at com.auruspay.rest.AurusServiceController.<init>(AurusServiceController.java:1) ~[classes/:na]
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:32) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
@@ -73,3 +312,663 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
 	... 26 common frames omitted
 
+2026-04-23T12:43:33.276+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:43:33.276+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:43:33.276+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:43:33.356+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:43:33.356+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:43:33.357+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:43:33.365+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:43:33.365+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 88 ms
+2026-04-23T12:43:33.369+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:43:33.370+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:43:33.373+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:43:33.375+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The blank final field helper2 may not have been initialized
+	Type mismatch: cannot convert from StringBuffer to Map<String,Object>
+
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 26 common frames omitted
+
+2026-04-23T12:43:37.883+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:43:37.883+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:43:37.883+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:43:37.958+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:43:37.959+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:43:37.959+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:43:37.966+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:43:37.967+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 82 ms
+2026-04-23T12:43:37.970+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:43:37.970+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:43:37.973+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:43:37.974+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The blank final field helper2 may not have been initialized
+	Type mismatch: cannot convert from StringBuffer to Map<String,Object>
+
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 26 common frames omitted
+
+2026-04-23T12:44:09.027+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:09.027+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:09.027+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:09.100+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:09.101+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:09.101+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:09.107+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:09.107+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 78 ms
+2026-04-23T12:44:09.111+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:44:09.111+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:44:09.116+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:44:09.117+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Helper2 cannot be resolved to a type
+	Type mismatch: cannot convert from StringBuffer to Map<String,Object>
+
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 26 common frames omitted
+
+2026-04-23T12:44:27.899+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:27.899+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:27.899+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:27.971+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:27.972+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:27.972+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:27.978+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:27.978+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 78 ms
+2026-04-23T12:44:28.004+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:44:28.008+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:44:28.011+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.122 seconds (process running for 2593.681)
+2026-04-23T12:44:28.012+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:44:31.480+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:44:31.531+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:31.531+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:31.531+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:31.600+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:31.601+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:31.601+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:31.607+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:31.607+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 75 ms
+2026-04-23T12:44:31.610+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:44:31.610+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:44:31.613+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:44:31.615+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The blank final field helper2 may not have been initialized
+	Type mismatch: cannot convert from StringBuffer to Map<String,Object>
+
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 26 common frames omitted
+
+2026-04-23T12:44:43.245+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:43.245+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:43.245+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:43.315+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:43.315+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:43.315+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:43.323+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:43.324+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 77 ms
+2026-04-23T12:44:43.349+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:44:43.353+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:44:43.356+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.122 seconds (process running for 2609.015)
+2026-04-23T12:44:43.356+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:44:52.964+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:44:53.039+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:53.039+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:53.039+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:53.123+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:53.124+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:53.124+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:53.132+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:53.133+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 93 ms
+2026-04-23T12:44:53.160+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:44:53.164+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:44:53.166+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.139 seconds (process running for 2618.82)
+2026-04-23T12:44:53.167+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:44:57.662+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:44:57.727+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:44:57.727+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:44:57.727+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:44:57.806+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:44:57.807+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:44:57.807+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:44:57.815+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:44:57.815+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 87 ms
+2026-04-23T12:44:57.841+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:44:57.846+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:44:57.848+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.13 seconds (process running for 2623.499)
+2026-04-23T12:44:57.849+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:45:04.379+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:45:04.444+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:45:04.444+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:45:04.444+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:45:04.511+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:45:04.511+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:45:04.511+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:45:04.518+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:45:04.518+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 73 ms
+2026-04-23T12:45:04.542+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:45:04.546+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:45:04.548+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.115 seconds (process running for 2630.195)
+2026-04-23T12:45:04.550+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:45:19.232+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 1 deletion, 4 modifications)
+2026-04-23T12:45:19.322+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:45:19.322+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:45:19.322+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:45:19.447+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:45:19.448+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:45:19.448+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:45:19.454+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:45:19.454+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 130 ms
+2026-04-23T12:45:19.458+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+2026-04-23T12:45:19.458+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:45:19.463+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:45:19.467+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aurusServiceController' defined in file [C:\Users\nkharose\Videos\AurusService\target\classes\com\auruspay\controller\AurusServiceController.class]: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.auruspay.controller.AurusServiceController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.auruspay.service.Helper2 cannot be resolved
+	Helper2 cannot be resolved to a type
+	Helper2 cannot be resolved
+
+	at com.auruspay.controller.AurusServiceController.<init>(AurusServiceController.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 26 common frames omitted
+
+2026-04-23T12:45:28.050+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:45:28.050+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:45:28.050+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:45:28.120+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:45:28.121+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:45:28.121+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:45:28.128+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-7].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:45:28.128+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 77 ms
+2026-04-23T12:45:28.153+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:45:28.157+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:45:28.159+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.12 seconds (process running for 2653.792)
+2026-04-23T12:45:28.160+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:45:37.755+05:30  INFO 20156 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:45:37.822+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 20156 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:45:37.822+05:30 DEBUG 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:45:37.822+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:45:37.900+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:45:37.901+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:45:37.901+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:45:37.909+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat-7].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:45:37.909+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 87 ms
+2026-04-23T12:45:37.922+05:30  WARN 20156 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+2026-04-23T12:45:37.922+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:45:37.925+05:30  INFO 20156 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:45:37.926+05:30 ERROR 20156 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+
+2026-04-23T12:46:30.119+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 14492 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:46:30.120+05:30 DEBUG 14492 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:46:30.121+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:46:30.152+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T12:46:30.153+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T12:46:30.680+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:46:30.689+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:46:30.690+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:46:30.719+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:46:30.719+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 566 ms
+2026-04-23T12:46:30.826+05:30  WARN 14492 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+2026-04-23T12:46:30.828+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:46:30.836+05:30  INFO 14492 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:46:30.848+05:30 ERROR 14492 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLogDetails()
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLog(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+
+2026-04-23T12:47:46.370+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 17692 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:47:46.371+05:30 DEBUG 17692 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:47:46.372+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:47:46.404+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T12:47:46.404+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T12:47:46.921+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:47:46.928+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:47:46.929+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:47:46.957+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:47:46.957+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 553 ms
+2026-04-23T12:47:47.065+05:30  WARN 17692 --- [AURUS-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLog(String)
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLogDetails() mapped.
+2026-04-23T12:47:47.067+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-23T12:47:47.075+05:30  INFO 17692 --- [AURUS-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-23T12:47:47.087+05:30 ERROR 17692 --- [AURUS-SERVICE] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLog(String)
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLogDetails() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.auruspay.AurusServiceApplication.main(AurusServiceApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'aurusServiceController' method 
+com.auruspay.controller.AurusServiceController#getLog(String)
+to {GET [/aurus/logger]}: There is already 'aurusServiceController' bean method
+com.auruspay.controller.AurusServiceController#getLogDetails() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 21 common frames omitted
+
+2026-04-23T12:48:42.630+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 17648 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:48:42.631+05:30 DEBUG 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:48:42.632+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:48:42.663+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T12:48:42.664+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T12:48:43.195+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:48:43.202+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:48:43.203+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:48:43.230+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:48:43.230+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 566 ms
+2026-04-23T12:48:43.449+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:48:43.469+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:48:43.475+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 1.072 seconds (process running for 1.457)
+2026-04-23T12:48:50.086+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:48:50.086+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:48:50.087+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T12:50:02.444+05:30  INFO 17648 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:50:02.490+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 17648 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:50:02.490+05:30 DEBUG 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:50:02.490+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:50:02.592+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:50:02.592+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:50:02.592+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:50:02.601+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:50:02.601+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 109 ms
+2026-04-23T12:50:02.645+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:50:02.650+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:50:02.653+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.18 seconds (process running for 80.612)
+2026-04-23T12:50:02.654+05:30  INFO 17648 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:50:10.686+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:50:10.687+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:50:10.688+05:30  INFO 17648 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-23T12:58:06.175+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 7464 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:58:06.178+05:30 DEBUG 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:58:06.179+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:58:06.264+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23T12:58:06.265+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23T12:58:07.844+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:58:07.856+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:58:07.856+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:58:07.942+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:58:07.943+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1678 ms
+2026-04-23T12:58:08.603+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:58:08.667+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:58:08.681+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 3.163 seconds (process running for 4.344)
+2026-04-23T12:58:33.141+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T12:58:33.142+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T12:58:33.150+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-04-23T12:59:43.873+05:30  INFO 7464 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:59:43.947+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 7464 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:59:43.948+05:30 DEBUG 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:59:43.949+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:59:44.055+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:59:44.056+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:59:44.056+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:59:44.064+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:59:44.064+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 112 ms
+2026-04-23T12:59:44.101+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:59:44.106+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:59:44.109+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.178 seconds (process running for 99.464)
+2026-04-23T12:59:44.110+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T12:59:48.608+05:30  INFO 7464 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T12:59:48.673+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 7464 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T12:59:48.673+05:30 DEBUG 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T12:59:48.673+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T12:59:48.761+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T12:59:48.762+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T12:59:48.762+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T12:59:48.771+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T12:59:48.771+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2026-04-23T12:59:48.805+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T12:59:48.810+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T12:59:48.812+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.152 seconds (process running for 104.135)
+2026-04-23T12:59:48.813+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T13:00:03.576+05:30  INFO 7464 --- [AURUS-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-23T13:00:03.633+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Starting AurusServiceApplication using Java 17.0.10 with PID 7464 (C:\Users\nkharose\Videos\AurusService\target\classes started by nkharose in C:\Users\nkharose\Videos\AurusService)
+2026-04-23T13:00:03.633+05:30 DEBUG 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23T13:00:03.633+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T13:00:03.722+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1122 (http)
+2026-04-23T13:00:03.722+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T13:00:03.722+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-23T13:00:03.730+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-23T13:00:03.731+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2026-04-23T13:00:03.765+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-23T13:00:03.770+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1122 (http) with context path ''
+2026-04-23T13:00:03.772+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] com.auruspay.AurusServiceApplication     : Started AurusServiceApplication in 0.153 seconds (process running for 118.995)
+2026-04-23T13:00:03.772+05:30  INFO 7464 --- [AURUS-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-23T13:00:08.995+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T13:00:08.995+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T13:00:08.995+05:30  INFO 7464 --- [AURUS-SERVICE] [http-nio-1122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

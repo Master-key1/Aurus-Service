@@ -17,6 +17,7 @@ import com.auruspay.AurusServiceApplication;
 import com.auruspay.model.LogService;
 import com.auruspay.service.Driver;
 import com.auruspay.service.Helper;
+import com.auruspay.service.Helper2;
 
 @RestController
 @RequestMapping("/aurus")
@@ -32,8 +33,10 @@ public class AurusServiceController {
 	private Helper helper ;
 	@Autowired
 	private Driver driver;
-	
-	
+	@Autowired
+	private  Helper2 helper2;
+
+ 
 	   private static final Logger logger = Logger.getLogger(AurusServiceController.class.getName());
 	   private static final int ResponseEntity = 0;
 
@@ -69,7 +72,7 @@ public class AurusServiceController {
 	        return null;
 	    }
 	
-	@GetMapping("/logger")
+	@GetMapping("/loggger")
 	//public ResponseEntity<LogServiceDetails> getLogDetails(@RequestBody LogServiceDetails details ){
 	public ResponseEntity<String> getLogDetails(){
 		
@@ -85,15 +88,19 @@ public class AurusServiceController {
 		details+=port +")";
 		return new ResponseEntity<String>(details ,HttpStatus.OK);
 		
-	}
-	
-	@GetMapping("/logs")
-	public StringBuffer getLog(@RequestParam("txnid") String txnID) {
-	//    return helper.main(txnID);  // should return Map
-	    return driver.main(txnID);   
-		
-	}
-	
+	} 
+
+    @GetMapping("/logger")
+    public Map<String, Object> getLog(@RequestParam("txnid") String txnID) {
+
+        return Helper2.main(txnID);   // ✅ return Map directly
+    }
+    @GetMapping("/logs")
+    public StringBuffer getLogs(@RequestParam("txnid") String txnID) {
+
+        return Helper.main(txnID);   // ✅ return Map directly
+    }
+    
 	  @PostMapping("/txnlog")
 	    public String gettxnLog( @RequestBody LogService logService ){
 	          
